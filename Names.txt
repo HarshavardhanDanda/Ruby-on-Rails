@@ -1,0 +1,5 @@
+testing, pagination, views, mocking server, search funcionality  =>  test_app 
+filters => peeps 
+routes(nested), scopes etc => pundit-App
+pundit auth with json  => json-pundit
+pundit without json => pundit-app-new
