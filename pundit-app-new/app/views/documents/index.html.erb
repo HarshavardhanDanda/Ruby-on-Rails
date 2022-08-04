@@ -1,0 +1,8 @@
+<h1>All Documents</h1>
+
+<%if signed_in?%>
+  <% @documents.each do |document| %>
+    <h2><%= link_to document.name, document %></h2>
+    <h3><%= document.company.name %></h3>
+  <% end %>
+<% end %>

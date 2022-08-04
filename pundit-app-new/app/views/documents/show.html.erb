@@ -1,0 +1,6 @@
+<h1><%=@document.name%></h1>
+<p><%=@document.content%></p>
+
+<% if policy(@document).edit?%>
+  <%= link_to 'Edit', edit_document_path(@document)%>
+<%end%>

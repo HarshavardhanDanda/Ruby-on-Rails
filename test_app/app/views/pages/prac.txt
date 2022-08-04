@@ -1,0 +1,18 @@
+<%= form_with(model: @page,local: true) do |f| %>
+  <p></p>
+    <%= text_field_tag :q,params[:q]%>
+  </p>
+
+  <p>
+    <%= f.submit "Search" %>
+  </p>
+<%end%>
+
+
+<% @pages.each do |page| %>
+  <%=page.description%>
+<%end%>
+
+<% div_for page do %> 
+  <%=page.description%><br>
+<%end%>

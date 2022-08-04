@@ -1,0 +1,28 @@
+<h1>Categories listing page</h1>
+
+
+<table>
+  <thead>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <% @categories.each do |category| %>
+        <tr>
+          <td><%= category.name %> </td>
+          
+          <td><%= link_to category.name,category_path(category) %> </td>
+          
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<p>
+<%= link_to 'Create new category', new_category_path%>
+</p>

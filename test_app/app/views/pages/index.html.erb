@@ -1,0 +1,28 @@
+<h1>This is pages Index page</h1>
+
+<%= form_tag pages_path , role:'search',method: :get do %>
+  <p>
+    <%= text_field_tag :q,params[:q]%>
+  </p>
+
+  <p>
+    <%= submit_tag "Search" , name: nil%>
+  </p>
+<%end%>
+
+<h1>Pages</h1>
+
+<% @pages.each do |page| %>
+  <%=page.description%><br>
+  <%=page.content%><br><br>
+<%end%><br>
+<%# <%= will_paginate @pages %> 
+
+
+
+
+
+
+
+
+
